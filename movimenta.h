@@ -64,6 +64,12 @@ int verificadireita(char peca, int x, int y, int posicao[25][22]){
         }
         else{return 0;}
     }
+    if(peca=='b'){
+        if(posicao[y+0][x+4]>=1 || posicao[y+1][x+4]>=1 || posicao[y+2][x+4]>=1){
+            return 1;
+        }
+        else{return 0;}
+    }
 }
 
 int verificaesquerda(char peca, int x, int y, int posicao[25][22]){
@@ -113,6 +119,12 @@ int verificaesquerda(char peca, int x, int y, int posicao[25][22]){
     }
     if(peca=='a'){
         if(posicao[y][x-1]>=1 || posicao[y+1][x-1]>=1 || posicao[y+2][x-1]>=1 || posicao[y+3][x-1]>=1){
+            return 1;
+        }
+        else{return 0;}
+    }
+    if(peca=='b'){
+        if(posicao[y+0][x+1]>=1 || posicao[y+1][x-1]>=1 || posicao[y+2][x+1]>=1){
             return 1;
         }
         else{return 0;}
@@ -183,6 +195,12 @@ int verificabaixo(char peca, int x, int y, int posicao[25][22]){
     }
     if(peca=='a'){
         if(posicao[y+3][x+0]>=1 || posicao[y+3][x+1]>=1){
+            return 1;
+        }
+        else{return 0;}
+    }
+    if(peca=='b'){
+        if(posicao[y+1][0+x]>=1 || posicao[y+1][1+x]>=1 || posicao[y+2][2+x]>=1 || posicao[y+2][3+x]>=1){
             return 1;
         }
         else{return 0;}
@@ -260,3 +278,4 @@ char girapeca(char peca, int x, int y, int posicao[25][22]){
     }
 
 }
+
